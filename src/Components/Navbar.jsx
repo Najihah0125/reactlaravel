@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
   return (
@@ -7,23 +8,23 @@ export default function Navbar(){
         <div className="d-flex">
           {/* <!-- LOGO --> */}
           <div className="navbar-brand-box">
-            <a href="index.html" className="logo logo-dark">
+            <Link to="/index" className="logo logo-dark">
               <span className="logo-sm">
                 <img src="assets/images/logo-sm.png" alt="" height="22" />
               </span>
               <span className="logo-lg">
                 <img src="assets/images/logo-dark.png" alt="" height="20" />
               </span>
-            </a>
+            </Link>
 
-            <a href="index.html" className="logo logo-light">
+            <Link to="/index" className="logo logo-light">
               <span className="logo-sm">
                 <img src="assets/images/logo-sm.png" alt="" height="22" />
               </span>
               <span className="logo-lg">
                 <img src="assets/images/logo-light.png" alt="" height="20" />
               </span>
-            </a>
+            </Link>
           </div>
 
           <button
@@ -48,14 +49,14 @@ export default function Navbar(){
               </li>
 
               <li className="list-inline-item">
-                <a
-                  href="chat.html"
+                <Link
+                  to="/chat"
                   data-bs-toggle="tooltip"
                   data-placement="top"
                   title="Chat"
                 >
                   <i className="mdi mdi-tooltip-outline"></i>
-                </a>
+                </Link>
               </li>
 
               <li className="list-inline-item">
