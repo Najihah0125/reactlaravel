@@ -38,14 +38,14 @@ export default function Navbar(){
           <div className="topbar-social-icon me-3 d-none d-md-block">
             <ul className="list-inline title-tooltip m-0">
               <li className="list-inline-item">
-                <a
-                  href="email-inbox.html"
+                <Link
+                  to="/email-inbox"
                   data-bs-toggle="tooltip"
                   data-placement="top"
                   title="Email"
                 >
                   <i className="mdi mdi-email-outline"></i>
-                </a>
+                </Link>
               </li>
 
               <li className="list-inline-item">
@@ -60,25 +60,25 @@ export default function Navbar(){
               </li>
 
               <li className="list-inline-item">
-                <a
-                  href="calendar.html"
+                <Link
+                  to="/calendar"
                   data-bs-toggle="tooltip"
                   data-placement="top"
                   title="Calendar"
                 >
                   <i className="mdi mdi-calendar"></i>
-                </a>
+                </Link>
               </li>
 
               <li className="list-inline-item">
-                <a
-                  href="pages-invoice.html"
+                <Link
+                  to="/pages-invoice"
                   data-bs-toggle="tooltip"
                   data-placement="top"
                   title="Printer"
                 >
                   <i className="mdi mdi-printer"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -88,13 +88,13 @@ export default function Navbar(){
         <div className="search-wrap" id="search-wrap">
           <div className="search-bar">
             <input className="search-input form-control" placeholder="Search" />
-            <a
-              href="#"
+            <Link
+              to="#"
               className="close-search toggle-search"
               data-target="#search-wrap"
             >
               <i className="mdi mdi-close-circle"></i>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -127,8 +127,8 @@ export default function Navbar(){
             </button>
             <div className="dropdown-menu dropdown-menu-end">
               {/* <!-- item--> */}
-              <a
-                href="javascript:void(0);"
+              <Link
+                to="javascript:void(0);"
                 className="dropdown-item notify-item"
               >
                 <img
@@ -138,11 +138,11 @@ export default function Navbar(){
                   height="12"
                 />
                 <span className="align-middle"> German </span>
-              </a>
+              </Link>
 
               {/* <!-- item--> */}
-              <a
-                href="javascript:void(0);"
+              <Link
+                to="javascript:void(0);"
                 className="dropdown-item notify-item"
               >
                 <img
@@ -152,11 +152,11 @@ export default function Navbar(){
                   height="12"
                 />
                 <span className="align-middle"> Italian </span>
-              </a>
+              </Link>
 
               {/* <!-- item--> */}
-              <a
-                href="javascript:void(0);"
+              <Link
+                to="javascript:void(0);"
                 className="dropdown-item notify-item"
               >
                 <img
@@ -166,11 +166,11 @@ export default function Navbar(){
                   height="12"
                 />
                 <span className="align-middle"> Italian </span>
-              </a>
+              </Link>
 
               {/* <!-- item--> */}
-              <a
-                href="javascript:void(0);"
+              <Link
+                to="javascript:void(0);"
                 className="dropdown-item notify-item"
               >
                 <img
@@ -180,11 +180,11 @@ export default function Navbar(){
                   height="12"
                 />
                 <span className="align-middle"> Spanish </span>
-              </a>
+              </Link>
 
               {/* <!-- item--> */}
-              <a
-                href="javascript:void(0);"
+              <Link
+                to="javascript:void(0);"
                 className="dropdown-item notify-item"
               >
                 <img
@@ -194,7 +194,7 @@ export default function Navbar(){
                   height="12"
                 />
                 <span className="align-middle"> Russian </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -230,15 +230,15 @@ export default function Navbar(){
                     <h6 className="m-0"> Notifications </h6>
                   </div>
                   <div className="col-auto">
-                    <a href="#!" className="small">
+                    <Link to="#!" className="small">
                       {" "}
                       View All
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div data-simplebar style={{maxHeight: '230px'}}>
-                <a href="" className="text-reset notification-item">
+                <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <div className="avatar-xs me-3">
                       <span className="avatar-title bg-primary rounded-circle font-size-16">
@@ -257,8 +257,8 @@ export default function Navbar(){
                       </div>
                     </div>
                   </div>
-                </a>
-                <a href="" className="text-reset notification-item">
+                </Link>
+                <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <img
                       src="assets/images/users/avatar-3.jpg"
@@ -277,8 +277,8 @@ export default function Navbar(){
                       </div>
                     </div>
                   </div>
-                </a>
-                <a href="" className="text-reset notification-item">
+                </Link>
+                <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <div className="avatar-xs me-3">
                       <span className="avatar-title bg-success rounded-circle font-size-16">
@@ -297,9 +297,9 @@ export default function Navbar(){
                       </div>
                     </div>
                   </div>
-                </a>
-
-                <a href="" className="text-reset notification-item">
+                </Link>
+{/* notification */}
+                <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <img
                       src="assets/images/users/avatar-4.jpg"
@@ -318,16 +318,16 @@ export default function Navbar(){
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="p-2 border-top">
-                <a
+                <Link
                   className="btn btn-sm btn-link font-size-14 w-100 text-center"
-                  href="javascript:void(0)"
+                  to="javascript:void(0)"
                 >
                   <i className="mdi mdi-arrow-right-circle me-1"></i> View
                   More..
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -351,28 +351,28 @@ export default function Navbar(){
             </button>
             <div className="dropdown-menu dropdown-menu-end">
               {/* <!-- item--> */}
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to="#">
                 <i className="mdi mdi-account-circle-outline font-size-16 align-middle me-1"></i>{" "}
                 Profile
-              </a>
-              <a className="dropdown-item" href="#">
+              </Link>
+              <Link className="dropdown-item" to="#">
                 <i className="mdi mdi-wallet-outline font-size-16 align-middle me-1"></i>{" "}
                 My Wallet
-              </a>
-              <a className="dropdown-item d-block" href="#">
+              </Link>
+              <Link className="dropdown-item d-block" to="#">
                 <span className="badge badge-success float-end">11</span>
                 <i className="mdi mdi-cog-outline font-size-16 align-middle me-1"></i>{" "}
                 Settings
-              </a>
-              <a className="dropdown-item" href="#">
+              </Link>
+              <Link className="dropdown-item" to="#">
                 <i className="mdi mdi-lock-open-outline font-size-16 align-middle me-1"></i>{" "}
                 Lock screen
-              </a>
+              </Link>
               <div className="dropdown-divider"></div>
-              <a className="dropdown-item text-danger" href="#">
+              <Link className="dropdown-item text-danger" to="#">
                 <i className="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i>{" "}
                 Logout
-              </a>
+              </Link>
             </div>
           </div>
 
