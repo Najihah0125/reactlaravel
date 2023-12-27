@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 export default function Chat() {
   return (
-    <fragment>
+    <Fragment>
       <div className="main-content">
         <div className="page-content">
           {/* start page title */}
@@ -878,6 +878,6 @@ export default function Chat() {
         </div>
         {/* End Page-content */}
       </div>
-    </fragment>
+    </Fragment>
   );
 }
