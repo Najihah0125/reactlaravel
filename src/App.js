@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import DisplayPurchase from './Components/DisplayPurchase';
 import Navbar from './Components/Navbar';
 import Index from './Components/Index';
 import LeftSideBar from './Components/LeftSideBar';
