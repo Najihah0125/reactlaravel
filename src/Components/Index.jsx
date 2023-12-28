@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ApexChart from "../apexcharttt";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import worldMapConfig from "../jvectormap";
+import $ from 'jquery';
 
 export default function Index() {
+  
+  // useEffect(() => {
+  //   $("#world-map-markers").vectorMap(worldMapConfig);
+  // }, []);
+
+
+
   return (
     <div className="main-content">
       <div className="page-content">
@@ -657,9 +667,17 @@ export default function Index() {
                 <div className="card-body">
                   <h4 className="header-title mb-4">Sales by State</h4>
 
-                  <div id="world-map-markers" style={{ height: "230px" }}>
-                    {/* <ApexChart chartType="worldMapMarkers" /> */}
+                  <div id="world-map-markers" style={{ height: "230px" }}>                
                   </div>
+                  {/* <HelmetProvider>
+                    <Helmet>
+                      <script src="/Assets/admin-resources/jquery.vectormap/jquery-jvectormap-2.0.5.min.js" type="text/babel" />
+                      <script src="/Assets/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" type="text/babel" />
+                    </Helmet>
+                  </HelmetProvider> */}
+                  
+                  {/* <ApexChart chartType="worldMapMarkers" /> */}
+
 
                   <div className="px-4 py-3 mt-4">
                     <p className="mb-1">

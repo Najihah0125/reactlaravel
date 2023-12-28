@@ -1,3 +1,4 @@
+import { VectorMap } from "@react-jvectormap/core";
 import React, { Fragment, Component } from "react";
 import Chart from "react-apexcharts";
 
