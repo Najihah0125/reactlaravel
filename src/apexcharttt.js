@@ -1,4 +1,3 @@
-import { VectorMap } from "@react-jvectormap/core";
 import React, { Fragment, Component } from "react";
 import Chart from "react-apexcharts";
 
@@ -149,7 +148,7 @@ class ApexChart extends Component {
     return (
       <Chart
         options={this.state.list_chart_1.options}
-        series={this.state.list_chart_1.series}
+        series={this.state.list_chart_1.options.series}
         type={this.state.list_chart_1.options.chart.type}
         height={this.state.list_chart_1.options.chart.height}
       />

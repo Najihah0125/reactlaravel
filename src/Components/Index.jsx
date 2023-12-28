@@ -74,8 +74,8 @@ export default function Index() {
 
                     <div className="row align-items-center">
                       <div className="col-xl-9">
-                        <div style={{position: 'relative'}}>
-                          <div                            
+                        <div style={{ position: "relative" }}>
+                          <div
                             id="stacked-column-chart"
                             class="apex-charts"
                             dir="ltr"
@@ -444,36 +444,42 @@ export default function Index() {
                     <div className="mt-2 text-center">
                       <div className="row">
                         <div className="col-md-6">
-                          <div className="mt-4 mt-sm-0"></div>
-                          <p className="text-muted mb-2 mt-2 pt-1">
-                            Total Earning:
-                          </p>
-                          <h5 className="font-size-18 mb-1">USD 13,545.65</h5>
-                        </div>
-                      </div>
+                          <div className="mt-4 mt-sm-0">
+                            <div
+                              id="list-chart-1"
+                              className="apex-charts"
+                              dir="ltr"
+                            ></div>
+                            <ApexChart chartType="listChart1" />
 
-                      <div className="col-md-6 dash-goal">
-                        <div className="mt-4 mt-sm-0">
-                          <div
-                            id="list-chart-2"
-                            className="apex-charts"
-                            dir="ltr"
-                          >
-                            <ApexChart chartType="listChart2" />
+                            <p className="text-muted mb-2 mt-2 pt-1">
+                              Total Earning:
+                            </p>
+                            <h5 className="font-size-18 mb-1">USD 13,545.65</h5>
                           </div>
+                        </div>
 
-                          <p className="text-muted mb-2 mt-2 pt-1">
-                            Earning Goal:
-                          </p>
-                          <h5 className="font-size-18 mb-1">USD 84,265.45</h5>
+                        <div className="col-md-6 dash-goal">
+                          <div className="mt-4 mt-sm-0">
+                            <div
+                              id="list-chart-2"
+                              className="apex-charts"
+                              dir="ltr"
+                            ></div>
+                            <ApexChart chartType="listChart2" />
+
+                            <p className="text-muted mb-2 mt-2 pt-1">
+                              Earning Goal:
+                            </p>
+                            <h5 className="font-size-18 mb-1">USD 84,265.45</h5>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="card">
+                <div className="card">
                 <div className="card-body">
                   <h4 className="header-title mb-4">Best Selling Product</h4>
 
@@ -643,15 +649,16 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
 
-            <div className="col-xl-4">
+
+              <div className="col-xl-4">
               <div className="card">
                 <div className="card-body">
                   <h4 className="header-title mb-4">Sales by State</h4>
 
                   <div id="world-map-markers" style={{ height: "230px" }}>
-                  {/* <ApexChart chartType="worldMapMarkers" /> */}
+                    {/* <ApexChart chartType="worldMapMarkers" /> */}
                   </div>
 
                   <div className="px-4 py-3 mt-4">
@@ -700,6 +707,10 @@ export default function Index() {
                 </div>
               </div>
             </div>
+              
+            </div>
+
+            
           </div>
 
           <div className="row">
@@ -955,7 +966,7 @@ export default function Index() {
                         </tr>
                       </tbody>
                     </table>
-                  </div>                  
+                  </div>
                 </div>
               </div>
             </div>
