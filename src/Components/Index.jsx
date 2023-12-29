@@ -1,17 +1,10 @@
 import React, { useEffect } from "react";
 import ApexChart from "../apexcharttt";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import worldMapConfig from "../jvectormap";
-import $ from 'jquery';
+import { VectorMap } from "@react-jvectormap/core";
+import worldMill from "@react-jvectormap/world/dist/worldMill.json";
+import Utils from "./draftutiljs"
 
 export default function Index() {
-  
-  // useEffect(() => {
-  //   $("#world-map-markers").vectorMap(worldMapConfig);
-  // }, []);
-
-
-
   return (
     <div className="main-content">
       <div className="page-content">
@@ -490,164 +483,165 @@ export default function Index() {
                 </div>
 
                 <div className="card">
-                <div className="card-body">
-                  <h4 className="header-title mb-4">Best Selling Product</h4>
+                  <div className="card-body">
+                    <h4 className="header-title mb-4">Best Selling Product</h4>
 
-                  <div
-                    id="carouselExampleIndicators"
-                    className="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div className="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="0"
-                        className="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <div className="row align-items-center mb-5">
-                          <div className="col-md-4">
-                            <img
-                              src="assets/images/product/img-3.png"
-                              className="img-fluid me-3"
-                              alt=""
-                            />
-                          </div>
-                          <div className="col-md-7 offset-md-1">
-                            <div className="mt-4 mt-sm-0">
-                              <p className="text-muted mb-2">Headphone</p>
+                    <div
+                      id="carouselExampleIndicators"
+                      className="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div className="carousel-indicators">
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="0"
+                          className="active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="1"
+                          aria-label="Slide 2"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="2"
+                          aria-label="Slide 3"
+                        ></button>
+                      </div>
+                      <div className="carousel-inner">
+                        <div className="carousel-item active">
+                          <div className="row align-items-center mb-5">
+                            <div className="col-md-4">
+                              <img
+                                src="assets/images/product/img-3.png"
+                                className="img-fluid me-3"
+                                alt=""
+                              />
+                            </div>
+                            <div className="col-md-7 offset-md-1">
+                              <div className="mt-4 mt-sm-0">
+                                <p className="text-muted mb-2">Headphone</p>
 
-                              <h5 className="text-primary">Blue Headphone</h5>
+                                <h5 className="text-primary">Blue Headphone</h5>
 
-                              <div className="row no-gutters mt-4">
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>1200</h4>
-                                    <p className="text-muted mb-1">Sold</p>
+                                <div className="row no-gutters mt-4">
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>1200</h4>
+                                      <p className="text-muted mb-1">Sold</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>450</h4>
-                                    <p className="text-muted mb-1">Stock</p>
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>450</h4>
+                                      <p className="text-muted mb-1">Stock</p>
+                                    </div>
                                   </div>
-                                </div>
 
-                                <div className="col-4">
-                                  <div className="mt-4 pt-1">
-                                    <a
-                                      href=""
-                                      className="btn btn-primary btn-sm"
-                                    >
-                                      Buy Now
-                                    </a>
+                                  <div className="col-4">
+                                    <div className="mt-4 pt-1">
+                                      <a
+                                        href=""
+                                        className="btn btn-primary btn-sm"
+                                      >
+                                        Buy Now
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="carousel-item">
-                        <div className="row align-items-center mb-5">
-                          <div className="col-md-4">
-                            <img
-                              src="assets/images/product/img-5.png"
-                              className="img-fluid me-3"
-                              alt=""
-                            />
-                          </div>
-                          <div className="col-md-7 offset-md-1">
-                            <div className="mt-4 mt-sm-0">
-                              <p className="text-muted mb-2">T-shirt</p>
+                        <div className="carousel-item">
+                          <div className="row align-items-center mb-5">
+                            <div className="col-md-4">
+                              <img
+                                src="assets/images/product/img-5.png"
+                                className="img-fluid me-3"
+                                alt=""
+                              />
+                            </div>
+                            <div className="col-md-7 offset-md-1">
+                              <div className="mt-4 mt-sm-0">
+                                <p className="text-muted mb-2">T-shirt</p>
 
-                              <h5 className="text-primary">Blue T-shirt</h5>
+                                <h5 className="text-primary">Blue T-shirt</h5>
 
-                              <div className="row no-gutters mt-4">
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>800</h4>
-                                    <p className="text-muted mb-1">Sold</p>
+                                <div className="row no-gutters mt-4">
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>800</h4>
+                                      <p className="text-muted mb-1">Sold</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>250</h4>
-                                    <p className="text-muted mb-1">Stock</p>
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>250</h4>
+                                      <p className="text-muted mb-1">Stock</p>
+                                    </div>
                                   </div>
-                                </div>
 
-                                <div className="col-4">
-                                  <div className="mt-4 pt-1">
-                                    <a
-                                      href=""
-                                      className="btn btn-primary btn-sm"
-                                    >
-                                      Buy Now
-                                    </a>
+                                  <div className="col-4">
+                                    <div className="mt-4 pt-1">
+                                      <a
+                                        href=""
+                                        className="btn btn-primary btn-sm"
+                                      >
+                                        Buy Now
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="carousel-item">
-                        <div className="row align-items-center mb-5">
-                          <div className="col-md-4">
-                            <img
-                              src="assets/images/product/img-1.png"
-                              className="img-fluid me-3"
-                              alt=""
-                            />
-                          </div>
-                          <div className="col-md-7 offset-md-1">
-                            <div className="mt-4 mt-sm-0">
-                              <p className="text-muted mb-2">Sonic</p>
+                        <div className="carousel-item">
+                          <div className="row align-items-center mb-5">
+                            <div className="col-md-4">
+                              <img
+                                src="assets/images/product/img-1.png"
+                                className="img-fluid me-3"
+                                alt=""
+                              />
+                            </div>
+                            <div className="col-md-7 offset-md-1">
+                              <div className="mt-4 mt-sm-0">
+                                <p className="text-muted mb-2">Sonic</p>
 
-                              <h5 className="text-primary">Alarm clock</h5>
+                                <h5 className="text-primary">Alarm clock</h5>
 
-                              <div className="row no-gutters mt-4">
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>600</h4>
-                                    <p className="text-muted mb-1">Sold</p>
+                                <div className="row no-gutters mt-4">
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>600</h4>
+                                      <p className="text-muted mb-1">Sold</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="col-4">
-                                  <div className="mt-1">
-                                    <h4>150</h4>
-                                    <p className="text-muted mb-1">Stock</p>
+                                  <div className="col-4">
+                                    <div className="mt-1">
+                                      <h4>150</h4>
+                                      <p className="text-muted mb-1">Stock</p>
+                                    </div>
                                   </div>
-                                </div>
 
-                                <div className="col-4">
-                                  <div className="mt-4 pt-1">
-                                    <a
-                                      href=""
-                                      className="btn btn-primary btn-sm"
-                                    >
-                                      Buy Now
-                                    </a>
+                                  <div className="col-4">
+                                    <div className="mt-4 pt-1">
+                                      <a
+                                        href=""
+                                        className="btn btn-primary btn-sm"
+                                      >
+                                        Buy Now
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -659,76 +653,90 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-              </div>
-
 
               <div className="col-xl-4">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="header-title mb-4">Sales by State</h4>
+                <div className="card">
+                  <div className="card-body">
+                    <h4 className="header-title mb-4">Sales by State</h4>
 
-                  <div id="world-map-markers" style={{ height: "230px" }}>                
-                  </div>
-                  {/* <HelmetProvider>
-                    <Helmet>
-                      <script src="/Assets/admin-resources/jquery.vectormap/jquery-jvectormap-2.0.5.min.js" type="text/babel" />
-                      <script src="/Assets/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" type="text/babel" />
-                    </Helmet>
-                  </HelmetProvider> */}
-                  
-                  {/* <ApexChart chartType="worldMapMarkers" /> */}
-
-
-                  <div className="px-4 py-3 mt-4">
-                    <p className="mb-1">
-                      USA <span className="float-right">75%</span>
-                    </p>
-                    <div className="progress mt-2" style={{ height: "6px" }}>
-                      <div
-                        className="progress-bar progress-bar-striped bg-primary"
-                        role="progressbar"
-                        style={{ width: "75%" }}
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="75"
-                      ></div>
+                    <div id="world-map-markers" style={{ height: "230px" }}>
+                      <VectorMap
+                        map={worldMill}
+                        normalizeFunction="polynomial"
+                        hoverOpacity={0.7}
+                        hoverColor="rgba(255, 255, 255, 0.1)"
+                        regionStyle={{ initial: { fill: "#dde3ec" } }}
+                        markerStyle={{
+                          initial: {
+                            r: 9,
+                            fill: "#525CE9",
+                            "fill-opacity": 0.9,
+                            stroke: "#fff",
+                            "stroke-width": 7,
+                            "stroke-opacity": 0.4,
+                          },
+                          hover: {
+                            stroke: "#fff",
+                            "fill-opacity": 1,
+                            "stroke-width": 1.5,
+                          },
+                        }}
+                        backgroundColor="transparent"
+                        markers={[
+                          { latLng: [41.9, 12.45], name: "USA" },
+                          { latLng: [12.05, -61.75], name: "Russia" },
+                          { latLng: [1.3, 103.8], name: "Australia" },
+                        ]}
+                      />
                     </div>
 
-                    <p className="mt-3 mb-1">
-                      Russia <span className="float-right">55%</span>
-                    </p>
-                    <div className="progress mt-2" style={{ height: "6px" }}>
-                      <div
-                        className="progress-bar progress-bar-striped bg-primary"
-                        role="progressbar"
-                        style={{ width: "55%" }}
-                        aria-valuenow="55"
-                        aria-valuemin="0"
-                        aria-valuemax="55"
-                      ></div>
-                    </div>
+                    <div className="px-4 py-3 mt-4">
+                      <p className="mb-1">
+                        USA <span className="float-right">75%</span>
+                      </p>
+                      <div className="progress mt-2" style={{ height: "6px" }}>
+                        <div
+                          className="progress-bar progress-bar-striped bg-primary"
+                          role="progressbar"
+                          style={{ width: "75%" }}
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="75"
+                        ></div>
+                      </div>
 
-                    <p className="mt-3 mb-1">
-                      Australia <span className="float-right">85%</span>
-                    </p>
-                    <div className="progress mt-2" style={{ height: "6px" }}>
-                      <div
-                        className="progress-bar progress-bar-striped bg-primary"
-                        role="progressbar"
-                        style={{ width: "85%" }}
-                        aria-valuenow="85"
-                        aria-valuemin="0"
-                        aria-valuemax="85"
-                      ></div>
+                      <p className="mt-3 mb-1">
+                        Russia <span className="float-right">55%</span>
+                      </p>
+                      <div className="progress mt-2" style={{ height: "6px" }}>
+                        <div
+                          className="progress-bar progress-bar-striped bg-primary"
+                          role="progressbar"
+                          style={{ width: "55%" }}
+                          aria-valuenow="55"
+                          aria-valuemin="0"
+                          aria-valuemax="55"
+                        ></div>
+                      </div>
+
+                      <p className="mt-3 mb-1">
+                        Australia <span className="float-right">85%</span>
+                      </p>
+                      <div className="progress mt-2" style={{ height: "6px" }}>
+                        <div
+                          className="progress-bar progress-bar-striped bg-primary"
+                          role="progressbar"
+                          style={{ width: "85%" }}
+                          aria-valuenow="85"
+                          aria-valuemin="0"
+                          aria-valuemax="85"
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-              
-            </div>
-
-            
           </div>
 
           <div className="row">
