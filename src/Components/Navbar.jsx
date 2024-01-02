@@ -1,7 +1,147 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 export default function Navbar(){
+
+  // full screen permissions
+  const handleClick = (event) => {
+    event.preventDefault();
+    $("body").toggleClass("fullscreen-enable");
+    document.fullscreenElement ||
+      document.mozFullScreenElement ||
+      document.webkitFullscreenElement
+      ? document.cancelFullScreen
+        ? document.cancelFullScreen()
+        : document.mozCancelFullScreen
+        ? document.mozCancelFullScreen()
+        : document.webkitCancelFullScreen &&
+          document.webkitCancelFullScreen()
+      : document.documentElement.requestFullscreen
+      ? document.documentElement.requestFullscreen()
+      : document.documentElement.mozRequestFullScreen
+      ? document.documentElement.mozRequestFullScreen()
+      : document.documentElement.webkitRequestFullscreen &&
+        document.documentElement.webkitRequestFullscreen(
+          Element.ALLOW_KEYBOARD_INPUT
+        );
+  };
+
+
+  const handleClickSideBar = () => {
+    handleSidebarToggle();
+    closeSidebarOnOutsideClick();
+  };
+
+
+  // click button to hide the side bar, click again to display
+  const handleSidebarToggle = () => {
+    $("#vertical-menu-btn").on("click", (e) => {
+      e.preventDefault();
+      $("body").toggleClass("sidebar-enable");
+      if (992 <= $(window).width()) {
+        $("body").toggleClass("vertical-collpsed");
+      } else {
+        $("body").removeClass("vertical-collpsed");
+      }
+    });
+  };
+
+  const closeSidebarOnOutsideClick = () => {
+    $("body,html").click((e) => {
+      const target = $("#vertical-menu-btn");
+      if (
+        !target.is(e.target) &&
+        target.has(e.target).length === 0 &&
+        !e.target.closest("div.vertical-menu")
+      ) {
+        $("body").removeClass("sidebar-enable");
+      }
+    });
+  };
+
+
+  
+  // click search icon, then display search bar, click 'x' to close
+  useEffect(() => {
+    const handleToggleSearchClick = () => {
+      const target = $(".toggle-search").data("target");
+      target && $(target).toggleClass("open");
+    };
+
+    // Attach the click event listener to toggle-search
+    $(".toggle-search").on("click", handleToggleSearchClick);
+
+    // Cleanup function
+    return () => {
+      // Remove event listener for toggle-search
+      $(".toggle-search").off("click", handleToggleSearchClick);
+    };
+  }, []);
+
+
+  // fullscreen - if full screen button clicked, display console log & enter full screen, if click esc, exit from full screen
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (
+        !document.webkitIsFullScreen &&
+        !document.mozFullScreen &&
+        !document.msFullscreenElement
+      ) {
+        console.log("Full screen size");
+        $("body").removeClass("fullscreen-enable");
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
+  
+    // Cleanup function
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullscreenChange
+      );
+      document.removeEventListener("mozfullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
+
+  // display right bar after click the settings button
+  useEffect(() => {
+    const handleRightBarToggle = (e) => {
+      $("body").toggleClass("right-bar-enabled");
+    };
+
+    // Attach the click event listener
+    $(".right-bar-toggle").on("click", handleRightBarToggle);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      $(".right-bar-toggle").off("click", handleRightBarToggle);
+    };
+  });
+
+
+  // close the right bar after click outside the right bar
+  useEffect(() => {
+    const handleBodyClick = (e) => {
+      if (!($(e.target).closest(".right-bar-toggle, .right-bar").length > 0)) {
+        $("body").removeClass("right-bar-enabled");
+      }
+    };
+
+    // Attach the click event listener
+    $(document).on("click", "body", handleBodyClick);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      $(document).off("click", "body", handleBodyClick);
+    };
+  });
+
   return (
     <header id="page-topbar">
       <div className="navbar-header">
@@ -31,6 +171,7 @@ export default function Navbar(){
             type="button"
             className="btn btn-sm px-3 font-size-24 header-item waves-effect"
             id="vertical-menu-btn"
+            onClick={handleSidebarToggle}
           >
             <i className="mdi mdi-menu"></i>
           </button>
@@ -128,7 +269,7 @@ export default function Navbar(){
             <div className="dropdown-menu dropdown-menu-end">
               {/* <!-- item--> */}
               <Link
-                to="javascript:void(0);"
+                to=""
                 className="dropdown-item notify-item"
               >
                 <img
@@ -142,7 +283,7 @@ export default function Navbar(){
 
               {/* <!-- item--> */}
               <Link
-                to="javascript:void(0);"
+                to=""
                 className="dropdown-item notify-item"
               >
                 <img
@@ -156,7 +297,7 @@ export default function Navbar(){
 
               {/* <!-- item--> */}
               <Link
-                to="javascript:void(0);"
+                to=""
                 className="dropdown-item notify-item"
               >
                 <img
@@ -170,7 +311,7 @@ export default function Navbar(){
 
               {/* <!-- item--> */}
               <Link
-                to="javascript:void(0);"
+                to=""
                 className="dropdown-item notify-item"
               >
                 <img
@@ -184,7 +325,7 @@ export default function Navbar(){
 
               {/* <!-- item--> */}
               <Link
-                to="javascript:void(0);"
+                to=""
                 className="dropdown-item notify-item"
               >
                 <img
@@ -203,6 +344,7 @@ export default function Navbar(){
               type="button"
               className="btn header-item noti-icon waves-effect"
               data-toggle="fullscreen"
+              onClick={handleClickSideBar}
             >
               <i className="mdi mdi-fullscreen"></i>
             </button>

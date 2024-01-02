@@ -32,7 +32,7 @@ export default function RightSideBar() {
               id="light-mode-switch"
               checked
             />
-            <label className="form-check-label" for="light-mode-switch">
+            <label className="form-check-label" htmlFor="light-mode-switch">
               Light Mode
             </label>
           </div>
@@ -52,7 +52,7 @@ export default function RightSideBar() {
               data-bsStyle="assets/css/bootstrap-dark.min.css"
               data-appStyle="assets/css/app-dark.min.css"
             />
-            <label className="form-check-label" for="dark-mode-switch">
+            <label className="form-check-label" htmlFor="dark-mode-switch">
               Dark Mode
             </label>
           </div>
@@ -71,7 +71,7 @@ export default function RightSideBar() {
               id="rtl-mode-switch"
               data-appStyle="assets/css/app-rtl.min.css"
             />
-            <label className="form-check-label" for="rtl-mode-switch">
+            <label className="form-check-label" htmlFor="rtl-mode-switch">
               RTL Mode
             </label>
           </div>

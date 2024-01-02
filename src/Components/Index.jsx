@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import ApexChart from "../apexcharttt";
 import { VectorMap } from "@react-jvectormap/core";
 import worldMill from "@react-jvectormap/world/dist/worldMill.json";
-import Utils from "./draftutiljs"
 
 export default function Index() {
   return (
@@ -80,7 +79,7 @@ export default function Index() {
                         <div style={{ position: "relative" }}>
                           <div
                             id="stacked-column-chart"
-                            class="apex-charts"
+                            className="apex-charts"
                             dir="ltr"
                           >
                             <ApexChart chartType="stackedColumn" />
