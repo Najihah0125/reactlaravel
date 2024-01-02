@@ -171,7 +171,7 @@ export default function Navbar(){
             type="button"
             className="btn btn-sm px-3 font-size-24 header-item waves-effect"
             id="vertical-menu-btn"
-            onClick={handleSidebarToggle}
+            onClick={handleClickSideBar}
           >
             <i className="mdi mdi-menu"></i>
           </button>
@@ -344,7 +344,7 @@ export default function Navbar(){
               type="button"
               className="btn header-item noti-icon waves-effect"
               data-toggle="fullscreen"
-              onClick={handleClickSideBar}
+              onClick={handleClick}
             >
               <i className="mdi mdi-fullscreen"></i>
             </button>

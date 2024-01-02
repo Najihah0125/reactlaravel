@@ -26,6 +26,7 @@ function App() {
       </Routes>
       <Footer />
       <RightSideBar />
+      <div class="rightbar-overlay"></div>
       </div>
     </Router>
   );
