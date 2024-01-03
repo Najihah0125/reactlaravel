@@ -1,4 +1,7 @@
 import React from "react";
+import layout_1 from '../assets/images/layouts/layout-1.jpg';
+import layout_2 from '../assets/images/layouts/layout-2.jpg';
+import layout_3 from '../assets/images/layouts/layout-3.jpg';
 
 export default function RightSideBar() {
   return (
@@ -19,7 +22,7 @@ export default function RightSideBar() {
         <div className="p-4">
           <div className="mb-2">
             <img
-              src="assets/images/layouts/layout-1.jpg"
+              src={layout_1}
               className="img-fluid img-thumbnail"
               alt="layout-1"
             />
@@ -39,7 +42,7 @@ export default function RightSideBar() {
 
           <div className="mb-2">
             <img
-              src="assets/images/layouts/layout-2.jpg"
+              src={layout_2}
               className="img-fluid img-thumbnail"
               alt="layout-2"
             />
@@ -49,8 +52,8 @@ export default function RightSideBar() {
               className="form-check-input theme-choice"
               type="checkbox"
               id="dark-mode-switch"
-              data-bsStyle="assets/css/bootstrap-dark.min.css"
-              data-appStyle="assets/css/app-dark.min.css"
+              data-bsStyle="css/bootstrap-dark.min.css"
+              data-appStyle="css/app-dark.min.css"
             />
             <label className="form-check-label" htmlFor="dark-mode-switch">
               Dark Mode
@@ -59,7 +62,7 @@ export default function RightSideBar() {
 
           <div className="mb-2">
             <img
-              src="assets/images/layouts/layout-3.jpg"
+              src={layout_3}
               className="img-fluid img-thumbnail"
               alt="layout-3"
             />
@@ -69,7 +72,7 @@ export default function RightSideBar() {
               className="form-check-input theme-choice"
               type="checkbox"
               id="rtl-mode-switch"
-              data-appStyle="assets/css/app-rtl.min.css"
+              data-appStyle="css/app-rtl.min.css"
             />
             <label className="form-check-label" htmlFor="rtl-mode-switch">
               RTL Mode

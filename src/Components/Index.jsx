@@ -2,6 +2,15 @@ import React, { useEffect } from "react";
 import ApexChart from "../apexcharttt";
 import { VectorMap } from "@react-jvectormap/core";
 import worldMill from "@react-jvectormap/world/dist/worldMill.json";
+import img_3 from '../assets/images/product/img-3.png';
+import img_5 from '../assets/images/product/img-5.png';
+import img_1 from '../assets/images/product/img-1.png';
+import img_7 from '../assets/images/product/img-7.png';
+import img_8 from '../assets/images/product/img-8.png';
+import img_10 from '../assets/images/product/img-10.png';
+import img_11 from '../assets/images/product/img-11.png';
+import img_12 from '../assets/images/product/img-12.png';
+import avatar_7 from '../assets/images/users/avatar-7.jpg';
 
 export default function Index() {
   return (
@@ -271,7 +280,7 @@ export default function Index() {
                       <li className="activity-list activity-border">
                         <div className="activity-icon avatar-sm">
                           <img
-                            src="assets/images/users/avatar-7.jpg"
+                            src={avatar_7}
                             className="avatar-sm rounded-circle"
                             alt=""
                           />
@@ -354,7 +363,7 @@ export default function Index() {
                       <li className="activity-list activity-border">
                         <div className="activity-icon avatar-sm">
                           <img
-                            src="assets/images/users/avatar-7.jpg"
+                            src={avatar_7}
                             className="avatar-sm rounded-circle"
                             alt=""
                           />
@@ -517,7 +526,7 @@ export default function Index() {
                           <div className="row align-items-center mb-5">
                             <div className="col-md-4">
                               <img
-                                src="assets/images/product/img-3.png"
+                                src={img_3}
                                 className="img-fluid me-3"
                                 alt=""
                               />
@@ -562,7 +571,7 @@ export default function Index() {
                           <div className="row align-items-center mb-5">
                             <div className="col-md-4">
                               <img
-                                src="assets/images/product/img-5.png"
+                                src={img_5}
                                 className="img-fluid me-3"
                                 alt=""
                               />
@@ -607,7 +616,7 @@ export default function Index() {
                           <div className="row align-items-center mb-5">
                             <div className="col-md-4">
                               <img
-                                src="assets/images/product/img-1.png"
+                                src={img_1}
                                 className="img-fluid me-3"
                                 alt=""
                               />
@@ -889,7 +898,7 @@ export default function Index() {
                           <td>#2356</td>
                           <td>
                             <img
-                              src="assets/images/product/img-7.png"
+                              src={img_7}
                               width="42"
                               className="me-3"
                               alt=""
@@ -910,7 +919,7 @@ export default function Index() {
                           <td>#2564</td>
                           <td>
                             <img
-                              src="assets/images/product/img-8.png"
+                              src={img_8}
                               width="42"
                               className="me-3"
                               alt=""
@@ -931,7 +940,7 @@ export default function Index() {
                           <td>#2125</td>
                           <td>
                             <img
-                              src="assets/images/product/img-10.png"
+                              src={img_10}
                               width="42"
                               className="me-3"
                               alt=""
@@ -952,7 +961,7 @@ export default function Index() {
                           <td>#8587</td>
                           <td>
                             <img
-                              src="assets/images/product/img-11.png"
+                              src={img_11}
                               width="42"
                               className="me-3"
                               alt=""
@@ -973,7 +982,7 @@ export default function Index() {
                           <td>#2354</td>
                           <td>
                             <img
-                              src="assets/images/product/img-12.png"
+                              src={img_12}
                               width="42"
                               className="me-3"
                               alt=""

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 import {metisMenu} from "metismenu";
+import avatar_7 from '../assets/images/users/avatar-7.jpg';
 
 export default function LeftSideBar() {
 
@@ -112,7 +113,7 @@ export default function LeftSideBar() {
           <div className="dropdown">
             <div className="user-img">
               <img
-                src="assets/images/users/avatar-7.jpg"
+                src={avatar_7}
                 alt=""
                 className="rounded-circle"
               />

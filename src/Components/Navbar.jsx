@@ -1,6 +1,19 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import logo_sm from '../assets/images/logo-sm.png';
+import logo_dark from '../assets/images/logo-sm.png';
+import logo_light from '../assets/images/logo-light.png';
+import flag_us from '../assets/images/flags/us.jpg';
+import flag_french from '../assets/images/flags/french.jpg';
+import flag_germany from '../assets/images/flags/germany.jpg';
+import flag_italy from '../assets/images/flags/italy.jpg';
+import flag_russia from '../assets/images/flags/russia.jpg';
+import flag_spain from '../assets/images/flags/spain.jpg';
+import avatar_3 from '../assets/images/users/avatar-3.jpg';
+import avatar_4 from '../assets/images/users/avatar-4.jpg';
+import avatar_7 from '../assets/images/users/avatar-7.jpg';
+
 
 export default function Navbar(){
 
@@ -150,19 +163,19 @@ export default function Navbar(){
           <div className="navbar-brand-box">
             <Link to="/index" className="logo logo-dark">
               <span className="logo-sm">
-                <img src="assets/images/logo-sm.png" alt="" height="22" />
+                <img src={logo_sm} alt="" height="22" />
               </span>
               <span className="logo-lg">
-                <img src="assets/images/logo-dark.png" alt="" height="20" />
+                <img src={logo_dark} alt="" height="20" />
               </span>
             </Link>
 
             <Link to="/index" className="logo logo-light">
               <span className="logo-sm">
-                <img src="assets/images/logo-sm.png" alt="" height="22" />
+                <img src={logo_sm} alt="" height="22" />
               </span>
               <span className="logo-lg">
-                <img src="assets/images/logo-light.png" alt="" height="20" />
+                <img src={logo_light} alt="" height="20" />
               </span>
             </Link>
           </div>
@@ -260,7 +273,7 @@ export default function Navbar(){
             >
               <img
                 className="me-2"
-                src="assets/images/flags/us.jpg"
+                src={flag_us}
                 alt="Header Language"
                 height="16"
               />{" "}
@@ -273,7 +286,7 @@ export default function Navbar(){
                 className="dropdown-item notify-item"
               >
                 <img
-                  src="assets/images/flags/germany.jpg"
+                  src={flag_germany}
                   alt="user-image"
                   className="me-1"
                   height="12"
@@ -287,7 +300,7 @@ export default function Navbar(){
                 className="dropdown-item notify-item"
               >
                 <img
-                  src="assets/images/flags/italy.jpg"
+                  src={flag_italy}
                   alt="user-image"
                   className="me-1"
                   height="12"
@@ -301,7 +314,7 @@ export default function Navbar(){
                 className="dropdown-item notify-item"
               >
                 <img
-                  src="assets/images/flags/french.jpg"
+                  src={flag_french}
                   alt="user-image"
                   className="me-1"
                   height="12"
@@ -315,7 +328,7 @@ export default function Navbar(){
                 className="dropdown-item notify-item"
               >
                 <img
-                  src="assets/images/flags/spain.jpg"
+                  src={flag_spain}
                   alt="user-image"
                   className="me-1"
                   height="12"
@@ -329,7 +342,7 @@ export default function Navbar(){
                 className="dropdown-item notify-item"
               >
                 <img
-                  src="assets/images/flags/russia.jpg"
+                  src={flag_russia}
                   alt="user"
                   className="me-1"
                   height="12"
@@ -403,7 +416,7 @@ export default function Navbar(){
                 <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <img
-                      src="assets/images/users/avatar-3.jpg"
+                      src={avatar_3}
                       className="me-3 rounded-circle avatar-xs"
                       alt="user-pic"
                     />
@@ -444,7 +457,7 @@ export default function Navbar(){
                 <Link to="" className="text-reset notification-item">
                   <div className="media">
                     <img
-                      src="assets/images/users/avatar-4.jpg"
+                      src={avatar_4}
                       className="me-3 rounded-circle avatar-xs"
                       alt="user-pic"
                     />
@@ -485,7 +498,7 @@ export default function Navbar(){
             >
               <img
                 className="rounded-circle header-profile-user"
-                src="assets/images/users/avatar-7.jpg"
+                src={avatar_7}
                 alt="Header Avatar"
               />
               <span className="d-none d-xl-inline-block ms-1">James</span>

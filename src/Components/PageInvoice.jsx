@@ -47,7 +47,7 @@ export default function PageInvoice() {
                           </h4>
                           <h3 className="m-t-0">
                             <img
-                              src="assets/images/logo-dark.png"
+                              src="images/logo-dark.png"
                               alt="logo"
                               height={18}
                             />

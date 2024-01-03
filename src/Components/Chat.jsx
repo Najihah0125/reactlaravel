@@ -95,7 +95,7 @@ export default function Chat() {
                                       </div>
                                       <div className="align-self-center me-3">
                                         <img
-                                          src="assets/images/users/avatar-2.jpg"
+                                          src="images/users/avatar-2.jpg"
                                           className="rounded-circle avatar-xs"
                                           
                                         />
@@ -152,7 +152,7 @@ export default function Chat() {
                                       </div>
                                       <div className="align-self-center me-3">
                                         <img
-                                          src="assets/images/users/avatar-3.jpg"
+                                          src="images/users/avatar-3.jpg"
                                           className="rounded-circle avatar-xs"
                                           
                                         />
@@ -177,7 +177,7 @@ export default function Chat() {
                                       </div>
                                       <div className="align-self-center me-3">
                                         <img
-                                          src="assets/images/users/avatar-4.jpg"
+                                          src="images/users/avatar-4.jpg"
                                           className="rounded-circle avatar-xs"
                                           
                                         />
@@ -225,7 +225,7 @@ export default function Chat() {
                                       </div>
                                       <div className="align-self-center me-3">
                                         <img
-                                          src="assets/images/users/avatar-6.jpg"
+                                          src="images/users/avatar-6.jpg"
                                           className="rounded-circle avatar-xs"
                                           
                                         />
@@ -563,7 +563,7 @@ export default function Chat() {
                             <div className="conversation-list">
                               <div className="media">
                                 <img
-                                  src="assets/images/users/avatar-2.jpg"
+                                  src="images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
                                   
                                 />
@@ -653,7 +653,7 @@ export default function Chat() {
                                   </div>
                                 </div>
                                 <img
-                                  src="assets/images/users/avatar-3.jpg"
+                                  src="images/users/avatar-3.jpg"
                                   className="rounded-circle avatar-xs"
                                   
                                 />
@@ -664,7 +664,7 @@ export default function Chat() {
                             <div className="conversation-list">
                               <div className="media">
                                 <img
-                                  src="assets/images/users/avatar-2.jpg"
+                                  src="images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
                                   
                                 />
@@ -713,7 +713,7 @@ export default function Chat() {
                             <div className="conversation-list">
                               <div className="media">
                                 <img
-                                  src="assets/images/users/avatar-2.jpg"
+                                  src="images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
                                   
                                 />
@@ -800,7 +800,7 @@ export default function Chat() {
                                   </div>
                                 </div>
                                 <img
-                                  src="assets/images/users/avatar-3.jpg"
+                                  src="images/users/avatar-3.jpg"
                                   className="rounded-circle avatar-xs"
                                   
                                 />

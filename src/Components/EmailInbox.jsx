@@ -100,7 +100,7 @@ export default function EmailInbox() {
                     <Link to="#" className="media">
                       <img
                         className="d-flex me-3 rounded-circle"
-                        src="assets/images/users/avatar-2.jpg"
+                        src="images/users/avatar-2.jpg"
                         alt="Generic placeholder image"
                         height={36}
                       />
@@ -112,7 +112,7 @@ export default function EmailInbox() {
                     <Link to="#" className="media">
                       <img
                         className="d-flex me-3 rounded-circle"
-                        src="assets/images/users/avatar-3.jpg"
+                        src="images/users/avatar-3.jpg"
                         alt="Generic placeholder image"
                         height={36}
                       />
@@ -124,7 +124,7 @@ export default function EmailInbox() {
                     <Link to="#" className="media">
                       <img
                         className="d-flex me-3 rounded-circle"
-                        src="assets/images/users/avatar-4.jpg"
+                        src="images/users/avatar-4.jpg"
                         alt="Generic placeholder image"
                         height={36}
                       />
@@ -136,7 +136,7 @@ export default function EmailInbox() {
                     <Link to="#" className="media">
                       <img
                         className="d-flex me-3 rounded-circle"
-                        src="assets/images/users/avatar-6.jpg"
+                        src="images/users/avatar-6.jpg"
                         alt="Generic placeholder image"
                         height={36}
                       />
