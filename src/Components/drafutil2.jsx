@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import $ from 'jquery';
-rfc
+
 export const Utils = () => {
   useEffect(() => {
     const removeActiveClass = () => {

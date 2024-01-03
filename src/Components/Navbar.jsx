@@ -465,7 +465,7 @@ export default function Navbar(){
               <div className="p-2 border-top">
                 <Link
                   className="btn btn-sm btn-link font-size-14 w-100 text-center"
-                  to="javascript:void(0)"
+                  to=" "
                 >
                   <i className="mdi mdi-arrow-right-circle me-1"></i> View
                   More..

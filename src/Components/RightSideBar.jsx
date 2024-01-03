@@ -7,7 +7,7 @@ export default function RightSideBar() {
         <div className="rightbar-title d-flex align-items-center px-3 py-4">
           <h5 className="m-0 me-2">Settings</h5>
 
-          <a href="javascript:void(0);" className="right-bar-toggle ms-auto">
+          <a href="" className="right-bar-toggle ms-auto">
             <i className="mdi mdi-close noti-icon"></i>
           </a>
         </div>

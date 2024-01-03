@@ -16,10 +16,10 @@ export default function Index() {
                   <h4>Dashboard</h4>
                   <ol className="breadcrumb m-0">
                     <li className="breadcrumb-item">
-                      <a href="javascript: void(0);">Morvin</a>
+                      <a href="">Morvin</a>
                     </li>
                     <li className="breadcrumb-item">
-                      <a href="javascript: void(0);">Dashboard</a>
+                      <a href="">Dashboard</a>
                     </li>
                     <li className="breadcrumb-item active">Dashboard</li>
                   </ol>

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 export default function Chat() {
   return (
     <Fragment>
@@ -13,10 +13,10 @@ export default function Chat() {
                     <h4>Chat</h4>
                     <ol className="breadcrumb m-0">
                       <li className="breadcrumb-item">
-                        <a href="javascript: void(0);">Morvin</a>
+                        <a href=" ">Morvin</a>
                       </li>
                       <li className="breadcrumb-item">
-                        <a href="javascript: void(0);">Dashboard</a>
+                        <a href=" ">Dashboard</a>
                       </li>
                       <li className="breadcrumb-item active">Chat</li>
                     </ol>
@@ -88,7 +88,7 @@ export default function Chat() {
                               <h5 className="font-size-16 mb-3">Online</h5>
                               <ul className="list-unstyled chat-list">
                                 <li className="active">
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-success font-size-10" />
@@ -97,7 +97,7 @@ export default function Chat() {
                                         <img
                                           src="assets/images/users/avatar-2.jpg"
                                           className="rounded-circle avatar-xs"
-                                          alt
+                                          
                                         />
                                       </div>
                                       <div className="media-body overflow-hidden">
@@ -113,7 +113,7 @@ export default function Chat() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-success font-size-10" />
@@ -145,7 +145,7 @@ export default function Chat() {
                               <h5 className="font-size-16 mb-3">Contact</h5>
                               <ul className="list-unstyled chat-list">
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-success font-size-10" />
@@ -154,7 +154,7 @@ export default function Chat() {
                                         <img
                                           src="assets/images/users/avatar-3.jpg"
                                           className="rounded-circle avatar-xs"
-                                          alt
+                                          
                                         />
                                       </div>
                                       <div className="media-body overflow-hidden">
@@ -170,7 +170,7 @@ export default function Chat() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-warning font-size-10" />
@@ -179,7 +179,7 @@ export default function Chat() {
                                         <img
                                           src="assets/images/users/avatar-4.jpg"
                                           className="rounded-circle avatar-xs"
-                                          alt
+                                          
                                         />
                                       </div>
                                       <div className="media-body overflow-hidden">
@@ -195,7 +195,7 @@ export default function Chat() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle font-size-10" />
@@ -218,7 +218,7 @@ export default function Chat() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-success font-size-10" />
@@ -227,7 +227,7 @@ export default function Chat() {
                                         <img
                                           src="assets/images/users/avatar-6.jpg"
                                           className="rounded-circle avatar-xs"
-                                          alt
+                                          
                                         />
                                       </div>
                                       <div className="media-body overflow-hidden">
@@ -243,7 +243,7 @@ export default function Chat() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="">
                                     <div className="media">
                                       <div className="align-self-center me-3">
                                         <i className="mdi mdi-circle text-success font-size-10" />
@@ -272,7 +272,7 @@ export default function Chat() {
                             <h5 className="font-size-14 mb-3">Group</h5>
                             <ul className="list-unstyled chat-list">
                               <li>
-                                <a href="#">
+                                <a href="">
                                   <div className="media align-items-center">
                                     <div className="avatar-xs me-3">
                                       <span className="avatar-title rounded-circle bg-soft-primary text-primary">
@@ -288,7 +288,7 @@ export default function Chat() {
                                 </a>
                               </li>
                               <li>
-                                <a href="#">
+                                <a href="">
                                   <div className="media align-items-center">
                                     <div className="avatar-xs me-3">
                                       <span className="avatar-title rounded-circle bg-soft-primary text-primary">
@@ -304,7 +304,7 @@ export default function Chat() {
                                 </a>
                               </li>
                               <li>
-                                <a href="#">
+                                <a href="">
                                   <div className="media align-items-center">
                                     <div className="avatar-xs me-3">
                                       <span className="avatar-title rounded-circle bg-soft-primary text-primary">
@@ -320,7 +320,7 @@ export default function Chat() {
                                 </a>
                               </li>
                               <li>
-                                <a href="#">
+                                <a href="">
                                   <div className="media align-items-center">
                                     <div className="avatar-xs me-3">
                                       <span className="avatar-title rounded-circle bg-soft-primary text-primary">
@@ -336,7 +336,7 @@ export default function Chat() {
                                 </a>
                               </li>
                               <li>
-                                <a href="#">
+                                <a href="">
                                   <div className="media align-items-center">
                                     <div className="avatar-xs me-3">
                                       <span className="avatar-title rounded-circle bg-soft-primary text-primary">
@@ -364,14 +364,14 @@ export default function Chat() {
                                 </div>
                                 <ul className="list-unstyled chat-list">
                                   <li>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Adam Miller
                                       </h5>
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Alfonso Fisher
                                       </h5>
@@ -387,7 +387,7 @@ export default function Chat() {
                                 </div>
                                 <ul className="list-unstyled chat-list">
                                   <li>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Bonnie Harney
                                       </h5>
@@ -403,17 +403,17 @@ export default function Chat() {
                                 </div>
                                 <ul className="list-unstyled chat-list">
                                   <li>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Charles Brown
                                       </h5>
                                     </a>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Carmella Jones
                                       </h5>
                                     </a>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Carrie Williams
                                       </h5>
@@ -429,7 +429,7 @@ export default function Chat() {
                                 </div>
                                 <ul className="list-unstyled chat-list">
                                   <li>
-                                    <a href="#">
+                                    <a href="">
                                       <h5 className="font-size-14 mb-0">
                                         Dolores Minter
                                       </h5>
@@ -504,16 +504,16 @@ export default function Chat() {
                                   <i className="mdi mdi-cog-outline font-size-18" />
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-end">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     View Profile
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Clear chat
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Muted
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Delete
                                   </a>
                                 </div>
@@ -531,13 +531,13 @@ export default function Chat() {
                                   <i className="mdi mdi-dots-horizontal font-size-18" />
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-end">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Action
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Another action
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="">
                                     Something else
                                   </a>
                                 </div>
@@ -565,13 +565,13 @@ export default function Chat() {
                                 <img
                                   src="assets/images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
-                                  alt
+                                  
                                 />
                                 <div className="media-body arrow-left ms-3">
                                   <div className="dropdown">
                                     <a
                                       className="dropdown-toggle"
-                                      href="#"
+                                      href=""
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-haspopup="true"
@@ -580,16 +580,16 @@ export default function Chat() {
                                       <i className="bx bx-dots-vertical-rounded" />
                                     </a>
                                     <div className="dropdown-menu">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Copy
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Save
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Forward
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Delete
                                       </a>
                                     </div>
@@ -615,7 +615,7 @@ export default function Chat() {
                                   <div className="dropdown">
                                     <a
                                       className="dropdown-toggle"
-                                      href="#"
+                                      href=""
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-haspopup="true"
@@ -624,16 +624,16 @@ export default function Chat() {
                                       <i className="bx bx-dots-vertical-rounded" />
                                     </a>
                                     <div className="dropdown-menu">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Copy
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Save
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Forward
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Delete
                                       </a>
                                     </div>
@@ -655,7 +655,7 @@ export default function Chat() {
                                 <img
                                   src="assets/images/users/avatar-3.jpg"
                                   className="rounded-circle avatar-xs"
-                                  alt
+                                  
                                 />
                               </div>
                             </div>
@@ -666,13 +666,13 @@ export default function Chat() {
                                 <img
                                   src="assets/images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
-                                  alt
+                                  
                                 />
                                 <div className="media-body arrow-left ms-3">
                                   <div className="dropdown">
                                     <a
                                       className="dropdown-toggle"
-                                      href="#"
+                                      href=""
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-haspopup="true"
@@ -681,16 +681,16 @@ export default function Chat() {
                                       <i className="bx bx-dots-vertical-rounded" />
                                     </a>
                                     <div className="dropdown-menu">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Copy
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Save
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Forward
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Delete
                                       </a>
                                     </div>
@@ -715,13 +715,13 @@ export default function Chat() {
                                 <img
                                   src="assets/images/users/avatar-2.jpg"
                                   className="rounded-circle avatar-xs"
-                                  alt
+                                  
                                 />
                                 <div className="media-body arrow-left ms-3">
                                   <div className="dropdown">
                                     <a
                                       className="dropdown-toggle"
-                                      href="#"
+                                      href=""
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-haspopup="true"
@@ -730,16 +730,16 @@ export default function Chat() {
                                       <i className="bx bx-dots-vertical-rounded" />
                                     </a>
                                     <div className="dropdown-menu">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Copy
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Save
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Forward
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Delete
                                       </a>
                                     </div>
@@ -765,7 +765,7 @@ export default function Chat() {
                                   <div className="dropdown">
                                     <a
                                       className="dropdown-toggle"
-                                      href="#"
+                                      href=""
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-haspopup="true"
@@ -774,16 +774,16 @@ export default function Chat() {
                                       <i className="bx bx-dots-vertical-rounded" />
                                     </a>
                                     <div className="dropdown-menu">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Copy
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Save
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Forward
                                       </a>
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="">
                                         Delete
                                       </a>
                                     </div>
@@ -802,7 +802,7 @@ export default function Chat() {
                                 <img
                                   src="assets/images/users/avatar-3.jpg"
                                   className="rounded-circle avatar-xs"
-                                  alt
+                                  
                                 />
                               </div>
                             </div>
@@ -822,7 +822,7 @@ export default function Chat() {
                                 <ul className="list-inline mb-0">
                                   <li className="list-inline-item">
                                     <a
-                                      href="#"
+                                      href=""
                                       data-bs-toggle="tooltip"
                                       data-placement="top"
                                       title="Emoji"
@@ -832,7 +832,7 @@ export default function Chat() {
                                   </li>
                                   <li className="list-inline-item">
                                     <a
-                                      href="#"
+                                      href=""
                                       data-bs-toggle="tooltip"
                                       data-placement="top"
                                       title="Images"
@@ -842,7 +842,7 @@ export default function Chat() {
                                   </li>
                                   <li className="list-inline-item">
                                     <a
-                                      href="#"
+                                      href=""
                                       data-bs-toggle="tooltip"
                                       data-placement="top"
                                       title="Add Files"

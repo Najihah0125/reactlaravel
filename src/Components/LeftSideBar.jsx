@@ -4,6 +4,9 @@ import $ from "jquery";
 import {metisMenu} from "metismenu";
 
 export default function LeftSideBar() {
+
+  
+
   useEffect(() => {
     const initializeSidebar = () => {
       $("#side-menu").metisMenu();
@@ -34,6 +37,7 @@ export default function LeftSideBar() {
     };
 
     initializeSidebar();
+    // sidebarMenuLink();
     
   }, []);
 
@@ -69,27 +73,36 @@ export default function LeftSideBar() {
     scrollSidebarMenu();
   }, []);
 
-  const sidebarMenuLink = () => {
-    $("#sidebar-menu a").each(function () {
-      const currentURL = window.location.href.split(/[?#]/)[0];
-      if (this.href === currentURL) {
-        $(this).addClass("active");
-        $(this).parent().addClass("mm-active");
-        $(this).parent().parent().addClass("mm-show");
-        $(this).parent().parent().prev().addClass("mm-active");
-        $(this).parent().parent().parent().addClass("mm-active");
-        $(this).parent().parent().parent().parent().addClass("mm-show");
-        $(this)
-          .parent()
-          .parent()
-          .parent()
-          .parent()
-          .parent()
-          .parent()
-          .addClass("mm-active");
-      }
-    });
-  };
+
+  
+ 
+    const sidebarMenuLink = () => {
+      $("#sidebar-menu a").each(function () {
+        const currentURL = window.location.href.split(/[?#]/)[0];
+        if (this.href === currentURL) {
+          $(this).addClass("active");
+          $(this).parent().addClass("mm-active");
+          $(this).parent().parent().addClass("mm-show");
+          $(this).parent().parent().prev().addClass("mm-active");
+          $(this).parent().parent().parent().addClass("mm-active");
+          $(this).parent().parent().parent().parent().addClass("mm-show");
+          $(this)
+            .parent()
+            .parent()
+            .parent()
+            .parent()
+            .parent()
+            .parent()
+            .addClass("mm-active");
+        }
+      });
+    };
+
+  
+
+
+  
+  
 
   return (
     // profile pic
@@ -120,7 +133,7 @@ export default function LeftSideBar() {
             <li className="menu-title">Menu</li>
 
             <li>
-              <Link to="/" className="waves-effect">
+              <Link to="/index" className="waves-effect">
                 <i className="dripicons-home"></i>
                 <span className="badge rounded-pill bg-info float-end">3</span>
                 <span>Dashboard</span>
@@ -408,7 +421,7 @@ export default function LeftSideBar() {
               </Link>
               <ul className="sub-menu" aria-expanded="true">
                 <li>
-                  <Link to="javascript: void(0);" className="has-arrow">
+                  <Link to=" " className="has-arrow">
                     Vertical
                   </Link>
                   <ul className="sub-menu" aria-expanded="true">
@@ -433,7 +446,7 @@ export default function LeftSideBar() {
                 </li>
 
                 <li>
-                  <Link to="javascript: void(0);" className="has-arrow">
+                  <Link to=" " className="has-arrow">
                     Horizontal
                   </Link>
                   <ul className="sub-menu" aria-expanded="true">
@@ -535,18 +548,18 @@ export default function LeftSideBar() {
               </Link>
               <ul className="sub-menu" aria-expanded="true">
                 <li>
-                  <Link to="javascript: void(0);">Level 1.1</Link>
+                  <Link to=" ">Level 1.1</Link>
                 </li>
                 <li>
-                  <Link to="javascript: void(0);" className="has-arrow">
+                  <Link to=" " className="has-arrow">
                     Level 1.2
                   </Link>
                   <ul className="sub-menu" aria-expanded="true">
                     <li>
-                      <Link to="javascript: void(0);">Level 2.1</Link>
+                      <Link to=" ">Level 2.1</Link>
                     </li>
                     <li>
-                      <Link to="javascript: void(0);">Level 2.2</Link>
+                      <Link to=" ">Level 2.2</Link>
                     </li>
                   </ul>
                 </li>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Index from './Components/Index';
 import LeftSideBar from './Components/LeftSideBar';
@@ -17,8 +17,8 @@ function App() {
       <Navbar />
       <LeftSideBar />
       <Routes>
+        <Route path="/" element={<Navigate to="/index" />} />
         <Route exact path="/index" element={<Index/>} />
-        <Route exact path="/" element={<Index/>} />
         <Route exact path="/calendar" element={<Calendar/>} />
         <Route exact path="/chat" element={<Chat/>} />
         <Route exact path="/email-inbox" element={<EmailInbox/>} />

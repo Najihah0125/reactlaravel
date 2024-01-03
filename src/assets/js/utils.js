@@ -1,6 +1,6 @@
 !(function (n) {
   "use strict";
-//   topnav
+//   topnav - for horizontal layout (layout-horizontal.html)
   function s() {
     for (
       var e = document
@@ -87,7 +87,7 @@
     }),
 
 
-
+    // utk layout horizontal
     n(".navbar-nav a").each(function () {
       var e = window.location.href.split(/[?#]/)[0];
       this.href == e &&
@@ -154,8 +154,6 @@
     n(".right-bar-toggle").on("click", function (e) {
       n("body").toggleClass("right-bar-enabled");
     }),
-
-
 
     n(document).on("click", "body", function (e) {
       0 < n(e.target).closest(".right-bar-toggle, .right-bar").length ||
