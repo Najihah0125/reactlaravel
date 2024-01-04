@@ -23,6 +23,7 @@
     "metismenu": "^3.0.7",
     "moment": "^2.30.1",
     "node-waves": "^0.7.6",
+    "parsleyjs": "^2.9.2",
     "promise": "^8.3.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",

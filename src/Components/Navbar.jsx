@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 import logo_sm from '../assets/images/logo-sm.png';
-import logo_dark from '../assets/images/logo-sm.png';
+import logo_dark from '../assets/images/logo-dark.png';
 import logo_light from '../assets/images/logo-light.png';
 import flag_us from '../assets/images/flags/us.jpg';
 import flag_french from '../assets/images/flags/french.jpg';

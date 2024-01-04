@@ -1,13 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
-import {metisMenu} from "metismenu";
-import avatar_7 from '../assets/images/users/avatar-7.jpg';
+import { metisMenu } from "metismenu";
+import avatar_7 from "../assets/images/users/avatar-7.jpg";
 
 export default function LeftSideBar() {
-
-  
-
   useEffect(() => {
     const initializeSidebar = () => {
       $("#side-menu").metisMenu();
@@ -39,9 +36,7 @@ export default function LeftSideBar() {
 
     initializeSidebar();
     // sidebarMenuLink();
-    
   }, []);
-
 
   useEffect(() => {
     const scrollSidebarMenu = () => {
@@ -74,36 +69,27 @@ export default function LeftSideBar() {
     scrollSidebarMenu();
   }, []);
 
-
-  
- 
-    const sidebarMenuLink = () => {
-      $("#sidebar-menu a").each(function () {
-        const currentURL = window.location.href.split(/[?#]/)[0];
-        if (this.href === currentURL) {
-          $(this).addClass("active");
-          $(this).parent().addClass("mm-active");
-          $(this).parent().parent().addClass("mm-show");
-          $(this).parent().parent().prev().addClass("mm-active");
-          $(this).parent().parent().parent().addClass("mm-active");
-          $(this).parent().parent().parent().parent().addClass("mm-show");
-          $(this)
-            .parent()
-            .parent()
-            .parent()
-            .parent()
-            .parent()
-            .parent()
-            .addClass("mm-active");
-        }
-      });
-    };
-
-  
-
-
-  
-  
+  const sidebarMenuLink = () => {
+    $("#sidebar-menu a").each(function () {
+      const currentURL = window.location.href.split(/[?#]/)[0];
+      if (this.href === currentURL) {
+        $(this).addClass("active");
+        $(this).parent().addClass("mm-active");
+        $(this).parent().parent().addClass("mm-show");
+        $(this).parent().parent().prev().addClass("mm-active");
+        $(this).parent().parent().parent().addClass("mm-active");
+        $(this).parent().parent().parent().parent().addClass("mm-show");
+        $(this)
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .parent()
+          .addClass("mm-active");
+      }
+    });
+  };
 
   return (
     // profile pic
@@ -112,11 +98,7 @@ export default function LeftSideBar() {
         <div className="user-sidebar text-center">
           <div className="dropdown">
             <div className="user-img">
-              <img
-                src={avatar_7}
-                alt=""
-                className="rounded-circle"
-              />
+              <img src={avatar_7} alt="" className="rounded-circle" />
               <span className="avatar-online bg-success"></span>
             </div>
             <div className="user-info">
@@ -156,10 +138,7 @@ export default function LeftSideBar() {
             </li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-cart"></i>
                 <span>Ecommerce</span>
               </Link>
@@ -192,10 +171,7 @@ export default function LeftSideBar() {
             </li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-mail"></i>
                 <span>Email</span>
               </Link>
@@ -215,10 +191,7 @@ export default function LeftSideBar() {
             <li className="menu-title">Components</li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-suitcase"></i>
                 <span>UI Elements</span>
               </Link>
@@ -293,19 +266,19 @@ export default function LeftSideBar() {
               </Link>
               <ul className="sub-menu" aria-expanded="false">
                 <li>
-                  <Link to="form-elements.html">Form Elements</Link>
+                  <Link to="/form-elements">Form Elements</Link>
                 </li>
                 <li>
-                  <Link to="form-validation.html">Form Validation</Link>
+                  <Link to="form-validation">Form Validation</Link>
                 </li>
                 <li>
-                  <Link to="form-advanced.html">Form Advanced</Link>
+                  <Link to="form-advanced">Form Advanced</Link>
                 </li>
                 <li>
-                  <Link to="form-editors.html">Form Editors</Link>
+                  <Link to="form-editors">Form Editors</Link>
                 </li>
                 <li>
-                  <Link to="form-uploads.html">Form Upload</Link>
+                  <Link to="form-uploads">Form Upload</Link>
                 </li>
                 <li>
                   <Link to="form-xeditable.html">Form Xeditable</Link>
@@ -319,10 +292,7 @@ export default function LeftSideBar() {
               </ul>
             </li>
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-graph-pie"></i>
                 <span>Charts</span>
               </Link>
@@ -348,10 +318,7 @@ export default function LeftSideBar() {
               </ul>
             </li>
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-toggles"></i>
                 <span>Tables</span>
               </Link>
@@ -372,10 +339,7 @@ export default function LeftSideBar() {
             </li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-basket"></i>
                 <span>Icons</span>
               </Link>
@@ -395,10 +359,7 @@ export default function LeftSideBar() {
               </ul>
             </li>
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-map"></i>
                 <span>Maps</span>
               </Link>
@@ -413,10 +374,7 @@ export default function LeftSideBar() {
             </li>
             <li className="menu-title">Extras</li>
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-device-desktop"></i>
                 <span>Layouts</span>
               </Link>
@@ -477,10 +435,7 @@ export default function LeftSideBar() {
               </ul>
             </li>
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-user-group"></i>
                 <span>Authentication</span>
               </Link>
@@ -501,10 +456,7 @@ export default function LeftSideBar() {
             </li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-copy"></i>
                 <span>Pages</span>
               </Link>
@@ -540,10 +492,7 @@ export default function LeftSideBar() {
             </li>
 
             <li>
-              <Link
-                to=""
-                className="has-arrow waves-effect"
-              >
+              <Link to="" className="has-arrow waves-effect">
                 <i className="dripicons-checklist"></i>
                 <span>Multi Level</span>
               </Link>
