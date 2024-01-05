@@ -9,7 +9,7 @@ import Chat from './Components/Chat';
 import PageInvoice from './Components/PageInvoice';
 import Calendar from './Components/Calendar';
 import EmailInbox from './Components/EmailInbox';
-import Form from './Components/Form';
+import FormElements from './Components/Form';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/chat" element={<Chat/>} />
         <Route exact path="/email-inbox" element={<EmailInbox/>} />
         <Route exact path="/pages-invoice" element={<PageInvoice/>} />
-        <Route exact path="/form-elements" element={<Form/>} />
+        <Route exact path="/form-elements" element={<FormElements/>} />
       </Routes>
       <Footer />
       <RightSideBar />
