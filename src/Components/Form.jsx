@@ -4,14 +4,16 @@ import { Col, Form, Row, Button } from "react-bootstrap";
 import { BASE_URL } from "../helpers/url";
 
 export default function FormElements() {
+  const minNumberOfQuots = 3;
+  const [minQuotValid, setMinQuotValid] = useState(null);
   const [validated, setValidated] = useState(false);
   const [project, setProject] = useState([]);
-  const [purchase, setPurchase] = useState({
-    edd: "",
-    reason: "",
-    project_id: "",
-  });
-
+  // const [purchase, setPurchase] = useState({
+  //   purchase_edd: "",
+  //   purchase_reason: "",
+  //   purchase_project_id: "",
+  //   quotations: [],
+  // });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,31 +29,68 @@ export default function FormElements() {
   }, []);
 
   const handleSubmit = async (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      // if form is not complete
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    setValidated(true);
     event.preventDefault();
 
-    const data = { 
-      edd: purchase.edd,
-      reason: purchase.reason,
-      project_id: purchase.project_id,
-    };
-    await axios.post(`${BASE_URL}/createPurchase`, data).then(
-      res => {
-        alert(res.data.message);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+  const numberOfQuots = formData.getAll("quotation").length;
+
+    if (form.checkValidity() === false || numberOfQuots < minNumberOfQuots) {
+      // if form is not complete
+      event.stopPropagation();
+      // set validated to true, so that can display the error feedback at each inputs
+      setMinQuotValid(true);
+      setValidated(true);
+      console.log('min quot: ', minQuotValid);
+      console.log("At least 3 quotations");
+    } else {
+      setMinQuotValid(false);
+      setValidated(false);
+      console.log('min quot: ', minQuotValid);
+      const data = {
+        purchase_edd: formData.get("edd"),
+        purchase_reason: formData.get("reason"),
+        purchase_project_id: formData.get("project_id"),
+        quotations: formData.getAll("quotation"),
+      };
+      console.log("Submitting data:", data);
+      try {
+        const response = await axios.post(`${BASE_URL}/createPurchase`, data);
+        console.log("Response:", response.data);
+        alert(response.data.message);
+      } catch (error) {
+        console.error("Error submitting data:", error);
       }
-    );
+    }
   };
 
-  const handleInput = (e) => {
-    e.persist();
-    setPurchase({ ...purchase, [e.target.name]: e.target.value });
+  const handleFileChange = (e) => {
+    const files = e.target.files;
+    const numberOfFiles = files.length;
+    setMinQuotValid(numberOfFiles >= minNumberOfQuots);
   };
+
+
+  // const handleInput = (e) => {
+  //   e.persist();
+  //   setPurchase({ ...purchase, [e.target.name]: e.target.value });
+  //   console.log("purchase state:", purchase);
+
+  //   //minimum 3 quotations validation @ file upload input
+  //   // if (e.target.type === "file") {
+
+  //   //   if (Array.from(e.target.files).length < minQuotNum) {
+  //   //     // error feedback
+  //   //     // e.target.value = "";
+  //   //     setValidated(true);
+  //   //   } else {
+  //   //     // if user attach at least 3 quot
+  //   //     setPurchase({ ...purchase, [e.target.name]: e.target.value });
+  //   //     console.log("purchase state:", purchase);
+  //   //   }
+  //   // }
+  // };
 
   return (
     <div id="layout-wrapper">
@@ -115,10 +154,10 @@ export default function FormElements() {
                           >
                             <Form.Label>EDD</Form.Label>
                             <Form.Control
+                              name="edd"
                               required
                               type="date"
                               placeholder="Estimated Delivery Date"
-                              onChange={handleInput}
                             />
                             <Form.Control.Feedback>
                               Looks good!
@@ -131,10 +170,10 @@ export default function FormElements() {
                           >
                             <Form.Label>Reason</Form.Label>
                             <Form.Control
+                              name="reason"
                               required
                               type="text"
                               placeholder="Reason of purchase"
-                              onChange={handleInput}
                             />
                             <Form.Control.Feedback>
                               Looks good!
@@ -147,15 +186,15 @@ export default function FormElements() {
                           >
                             <Form.Label>Project Name</Form.Label>
                             <Form.Control
+                              name="project_id"
                               as="select"
                               required
-                              onChange={handleInput}
                             >
                               <option value="">Select a project</option>
                               {project.map((ms_project) => (
                                 <option
-                                  key={ms_project.id}
-                                  value={ms_project.id}
+                                  key={ms_project.project_id}
+                                  value={ms_project.project_id}
                                 >
                                   {ms_project.project_name}
                                 </option>
@@ -165,8 +204,33 @@ export default function FormElements() {
                               Please select a project.
                             </Form.Control.Feedback>
                           </Form.Group>
+                          <Form.Group>
+                            <Form.Label>File</Form.Label>
+                            <Form.Control
+                              type="file"
+                              multiple
+                              required
+                              name="quotation"
+                              isInvalid={!minQuotValid}
+                              onChange={handleFileChange}
+                            />
+                            <Form.Control.Feedback type="invalid">
+                                Please attach at least 3 quotations.
+                              </Form.Control.Feedback>
+                            {/* {minQuotValid && validated && (
+                              <Form.Control.Feedback type="invalid">
+                                Please attach at least 3 quotations.
+                              </Form.Control.Feedback>
+                            )}
+                            {!minQuotValid && !validated && (
+    <Form.Control.Feedback type="valid">
+      Looks good!
+    </Form.Control.Feedback>
+  )} */}
+                            
+                          </Form.Group>
                         </Row>
-                       
+
                         <Button type="submit">Submit form</Button>
                       </Form>
                     </div>

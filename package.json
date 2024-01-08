@@ -17,6 +17,7 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0",
+    "form-data": "^4.0.0",
     "jquery": "^2.2.4",
     "jquery-ui": "^1.13.2",
     "jvectormap-next": "^3.1.1",
