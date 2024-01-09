@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Formik = () => {
+const BasicWithoutBootstrap = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
