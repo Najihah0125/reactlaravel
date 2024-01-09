@@ -9,6 +9,9 @@ import Chat from './Components/Chat';
 import PageInvoice from './Components/PageInvoice';
 import Calendar from './Components/Calendar';
 import EmailInbox from './Components/EmailInbox';
+import Form from './Components/Form';
+import Formik from './Components/Formik';
+import DropZone from './Components/DropZone';
 import FormElements from './Components/Form';
 
 function App() {
